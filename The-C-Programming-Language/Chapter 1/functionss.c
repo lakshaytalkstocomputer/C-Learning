@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int power(int m, int n);
+
+main()
+{
+	int i;
+	for(i = 0; i < 10; ++i)
+	{
+		printf("%d %8d %8d\n", i, power(2,i) , power(-3,i));
+	}
+}
+
+/* power: raise base to n-th power; n >= 0 */
+
+int power(int base, int n)
+{
+	int p;
+	for( p = 1; n >= 0 ; --n)
+	{
+		p = p * base;
+	}
+
+	return p;
+
+} 
